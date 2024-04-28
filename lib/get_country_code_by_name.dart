@@ -1,4 +1,5 @@
 library get_country_code_by_name;
+
 /// A class that provides methods to retrieve country codes by passing the country name.
 class CountryCodeResolver {
   static Map<String, String> _countryCodes = {
@@ -204,7 +205,6 @@ class CountryCodeResolver {
     _countryCodes.entries.map((entry) => MapEntry(entry.value, entry.key)),
   );
 
-
   /// Returns the country code corresponding to the given [countryName].
   ///
   /// If the [countryName] is valid and a corresponding country code exists,
@@ -239,4 +239,3 @@ class CountryCodeResolver {
     return countryName != null ? countryName : 'Unknown';
   }
 }
-

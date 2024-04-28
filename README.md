@@ -13,7 +13,7 @@ Add `get_country_code_by_name` to your `pubspec.yaml` file:
 dependencies:
   flutter:
     sdk: flutter
-  get_country_code_by_name: ^0.0.6
+  get_country_code_by_name: ^0.0.8
 ```
 
 Install the package by running:
