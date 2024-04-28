@@ -1,9 +1,9 @@
 name: get_country_code_by_name
 description: A Flutter package to retrieve country codes by passing the country name.
 author: Mohamed Hekal
-homepage: https://github.com/yourusername/get_country_code_by_name
-repository: https://github.com/yourusername/get_country_code_by_name
-version: 0.0.2
+homepage: https://github.com/mohamedhekal/get_country_code_by_name
+repository: https://github.com/mohamedhekal/get_country_code_by_name
+version: 0.0.3
 
 environment:
   sdk: '>=3.1.0 <4.0.0'
