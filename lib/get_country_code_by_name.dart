@@ -1,6 +1,18 @@
 library get_country_code_by_name;
-
+/// A class that provides methods to retrieve country codes by passing the country name.
 class CountryCodeResolver {
+  /// Returns the country code corresponding to the given [countryName].
+  ///
+  /// If the [countryName] is valid and a corresponding country code exists,
+  /// this method returns the country code. Otherwise, it returns 'Unknown'.
+  ///
+  /// Example:
+  ///
+  /// ```dart
+  /// var resolver = CountryCodeResolver();
+  /// print(resolver.getCountryCode('egypt')); // Output: eg
+  /// ```
+  ///
   Map<String, String> _countryCodes = {
     'afghanistan': 'af',
     'albania': 'al',
@@ -200,6 +212,7 @@ class CountryCodeResolver {
   };
 
   String getCountryCode(String countryName) {
+    // Implementation of the method...
     String? countryCode = _countryCodes[countryName.toLowerCase()];
     return countryCode != null ? countryCode : 'Unknown';
   }
