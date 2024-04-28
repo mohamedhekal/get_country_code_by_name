@@ -1,19 +1,7 @@
 library get_country_code_by_name;
 /// A class that provides methods to retrieve country codes by passing the country name.
 class CountryCodeResolver {
-  /// Returns the country code corresponding to the given [countryName].
-  ///
-  /// If the [countryName] is valid and a corresponding country code exists,
-  /// this method returns the country code. Otherwise, it returns 'Unknown'.
-  ///
-  /// Example:
-  ///
-  /// ```dart
-  /// var resolver = CountryCodeResolver();
-  /// print(resolver.getCountryCode('egypt')); // Output: eg
-  /// ```
-  ///
-  Map<String, String> _countryCodes = {
+  static Map<String, String> _countryCodes = {
     'afghanistan': 'af',
     'albania': 'al',
     'algeria': 'dz',
@@ -211,10 +199,44 @@ class CountryCodeResolver {
     'zimbabwe': 'zw',
   };
 
+  // Map of country codes to country names
+  static Map<String, String> _countryNames = Map.fromEntries(
+    _countryCodes.entries.map((entry) => MapEntry(entry.value, entry.key)),
+  );
+
+
+  /// Returns the country code corresponding to the given [countryName].
+  ///
+  /// If the [countryName] is valid and a corresponding country code exists,
+  /// this method returns the country code. Otherwise, it returns 'Unknown'.
+  ///
+  /// Example:
+  ///
+  /// ```dart
+  /// var resolver = CountryCodeResolver();
+  /// print(resolver.getCountryCode('egypt')); // Output: eg
+  /// ```
+  ///
   String getCountryCode(String countryName) {
     // Implementation of the method...
     String? countryCode = _countryCodes[countryName.toLowerCase()];
     return countryCode != null ? countryCode : 'Unknown';
+  }
+
+  /// Returns the country name corresponding to the given [countryCode].
+  ///
+  /// If the [countryCode] is valid and a corresponding country name exists,
+  /// this method returns the country name. Otherwise, it returns 'Unknown'.
+  ///
+  /// Example:
+  ///
+  /// ```dart
+  /// var resolver = CountryCodeResolver();
+  /// print(resolver.getCountryName('eg')); // Output: egypt
+  /// ```
+  String getCountryName(String countryCode) {
+    String? countryName = _countryNames[countryCode.toLowerCase()];
+    return countryName != null ? countryName : 'Unknown';
   }
 }
 

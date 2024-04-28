@@ -1,9 +1,9 @@
-Certainly! Here's a README.md template you can use for your package:
+Sure, let's update the README.md file to reflect the new functionality added to the package. Here's an updated version of the README:
 
 ```markdown
 # get_country_code_by_name
 
-A Flutter package to retrieve country codes by passing the country name.
+A Flutter package to retrieve country codes and country names by passing either the country name or country code.
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add `get_country_code_by_name` to your `pubspec.yaml` file:
 dependencies:
   flutter:
     sdk: flutter
-  get_country_code_by_name: ^1.0.0
+  get_country_code_by_name: ^0.0.6
 ```
 
 Install the package by running:
@@ -25,23 +25,35 @@ flutter pub get
 Import the package in your Dart code:
 
 ```dart
-import 'package:get_country_code_by_name/country_code_resolver.dart';
+import 'package:get_country_code_by_name/get_country_code_by_name.dart';
 ```
 
 ## Usage
 
-You can use the `CountryCodeResolver` class to retrieve country codes by passing the country name.
+You can use the `CountryCodeResolver` class to retrieve country codes and country names.
+
+### Retrieving Country Code
+
+To retrieve the country code for a given country name:
 
 ```dart
-void main() {
-  // Example usage
-  print(CountryCodeResolver.getCountryCode('egypt')); // Output: eg
-}
+var resolver = CountryCodeResolver();
+print(resolver.getCountryCode('egypt')); // Output: eg
+```
+
+### Retrieving Country Name
+
+To retrieve the country name for a given country code:
+
+```dart
+var resolver = CountryCodeResolver();
+print(resolver.getCountryName('eg')); // Output: egypt
 ```
 
 ## Features
 
 - Retrieve country codes by country name.
+- Retrieve country names by country code.
 
 ## Issues and Feedback
 
@@ -57,6 +69,5 @@ This Flutter package is developed and maintained by Mohamed Hekal.
 
 - GitHub: [mohamedhekal](https://github.com/mohamedhekal)
 - Email: info@noouh.com
-- LinkedIn: [Mohamed Hekal](https://www.linkedin.com/in/mohamedhekal/)
-
+- Whatsapp: [Mohamed Hekal](https://wa.me/201093854603/)
 ```
